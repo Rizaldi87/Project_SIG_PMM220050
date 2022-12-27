@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navigasi -->
+    <nav>
+        <div class="logo">
+            <h1>RIZALDI</h1>
+        </div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#latar-belakang">latar belakang</a></li>
+            <li><a href="#data">DATA</a></li>
+            <li><a href="#peta_digital">PETA DIGITAL</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <i class="material-icons">menu</i>
+    </nav>
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner-text">
+            <h1 style="color: orange;">SIG</h1>
+            <h1>Peta Sebaran</h1>
+            <h1>agama di kabupaten kudus</h1>
+            <h2>Rizaldi Ibnu Mohamad</h2>
+        </div>
+    </div>
+    <!-- latar belakang -->
+    <div class="latar-belakang" id="latar-belakang">
+        <h1>latar-belakang</h1>
+        <div class="latar-belakang-box">
+            <div class="biodata">
+                <p>Kudus adalah salah satu kabupaten yang berada di Provinsi Jawa Tengah, Indonesia. Ibu kota kabupaten ini berada di kecamatan Kota Kudus, yang terletak di jalur pantai Timur laut Jawa Tengah antara Kota Semarang dan Kota Surabaya.
+                    Kudus merupakan pusat perkembangan agama Islam pada abad pertengahan. Hal ini dapat dilihat dari adanya tiga makam wali/sunan, yaitu Sunan Kudus, Sunan Muria, dan Sunan Kedu.
+                    Oleh karena itu, saya tertarik untuk melihat penyebaran agama lainnya di Kabupaten Kudus. 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- data -->
+    <div class="data" id="data">
+        <div class="container-data">
+            <div class="header-data">
+                <h1>DATA</h1>
+                <H2>Data diperoleh dari website resmi Badan Pusat Statistik Kota Kudus</H2>
+            </div>
+            <div class="data-images">
+                <div class="data-image">
+                    <img src="images/data_umat.png">
+                    <p>data jumlah penduduk menurut agama di kabupaten kudus tahun 2020</p>
+                </div>
+                <div class="data-image">
+                    <img src="images/rumah ibadah.png">
+                    <p>data jumlah rumah ibadah di kabupaten kudus tahun 2019-2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- peta digital -->
+    <div class="peta-digital" id="peta_digital">
+        <div class="container-peta">
+            <div class="header-peta">
+                <h1>peta digital</h1>
+                <h2>peta jumlah penduduk menurut agama dan rumah ibadah di kabupaten kudus </h1>
+            </div>
+            <div class="peta">
+                <iframe src="sig/index.html"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="contact" id="contact">
+        <h1>CONTACT</h1>
+        <div class="ktk">
+            <div class="ktk-firstbox">
+                <li><img src="images/home_pin_FILL1_wght400_GRAD0_opsz48.png" alt=""> Jl. Missi</li>
+                <li><img src="images/school.png" alt=""> Universitas Musamus Merauke</li>
+                <li><img src="images/call_FILL0_wght400_GRAD0_opsz48.png" alt=""> 088888080808</li>
+                <div class="sosmed">
+                    <a href="#"><img src="images/PNGs/instagram.png" alt="" /></a>
+                    <a href="#"><img src="images/PNGs/YouTube 2.png" alt="" /></a>
+                    <a href="#"><img src="images/PNGs/Twitter.png" alt="" /></a>
+                </div>
+            </div>
+            <form class="komen">
+                <input type="text" placeholder="NAMA" required>
+                <input type="text" placeholder="E-MAIL" required>
+                <input type="text" placeholder="ALAMAT" required>
+                <input type="text" placeholder="SUBJECT" required>
+                <input type="text" placeholder="KOMENTAR...." required>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('slide', window.scrollY > 0)
+        })
+
+        ul = document.querySelector('ul');
+        menu = document.querySelector('.material-icons');
+
+        menu.addEventListener('click', () => {
+            ul.classList.toggle('slide')
+
+            document.querySelectorAll('li').forEach(n => n.addEventListener('click', function () {
+                ul.classList.remove('slide')
+            }));
+        });
+
+        var detailsbtn = document.getElementsByClassName('services-btn')
+
+        for (var i = 0; i < detailsbtn.length; i++) {
+            var btn = detailsbtn[i]
+            btn.addEventListener('click', function () {
+                var buttonClicked = event.target;
+                var input = buttonClicked.parentElement.children[2];
+                input.classList.toggle('slide');
+            })
+        }
+
+
+        document.querySelectorAll('.exit-btn').forEach(n => n.addEventListener('click', () => {
+            document.querySelectorAll('.more-details').forEach(n => n.classList.remove('slide'))
+        }))
+    </script>
+</body>
+
+</html>
