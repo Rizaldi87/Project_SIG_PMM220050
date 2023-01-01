@@ -13,7 +13,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px 50px;
     align-items: center;
     color: white;
@@ -37,11 +37,6 @@ nav.slide ul li a {
     color: black;
 }
 
-.logo {
-    letter-spacing: 5px;
-    font-size: 30px;
-    font-family: 'Bebas Neue', cursive;
-}
 
 ul {
     list-style: none;
@@ -90,8 +85,8 @@ li a:hover {
     padding: 0 5px;
     background-color: rgb(12, 82, 40);
 }
-/* latar-belakang */
-.latar-belakang {
+/* tentang */
+.tentang {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +95,7 @@ li a:hover {
     min-height: 100vh;
 }
 
-.latar-belakang-box {
+.tentang-box {
     width: 70%;
     display: flex;
     gap: 20px;
@@ -108,7 +103,7 @@ li a:hover {
     margin-top: 20px;
 }
 
-.latar-belakang-box p {
+.tentang-box p {
     font-size: 1.2em;
 }
 
@@ -304,7 +299,7 @@ li a:hover {
         left: 0;
     }
 
-    .latar-belakang-box {
+    .tentang-box {
         width: 90%;
         /* text-align: justify; */
         flex-direction: column-reverse;
