@@ -128,32 +128,6 @@
             nav.classList.toggle('slide', window.scrollY > 0)
         })
 
-        ul = document.querySelector('ul');
-        menu = document.querySelector('.material-icons');
-
-        menu.addEventListener('click', () => {
-            ul.classList.toggle('slide')
-
-            document.querySelectorAll('li').forEach(n => n.addEventListener('click', function () {
-                ul.classList.remove('slide')
-            }));
-        });
-
-        var detailsbtn = document.getElementsByClassName('services-btn')
-
-        for (var i = 0; i < detailsbtn.length; i++) {
-            var btn = detailsbtn[i]
-            btn.addEventListener('click', function () {
-                var buttonClicked = event.target;
-                var input = buttonClicked.parentElement.children[2];
-                input.classList.toggle('slide');
-            })
-        }
-
-
-        document.querySelectorAll('.exit-btn').forEach(n => n.addEventListener('click', () => {
-            document.querySelectorAll('.more-details').forEach(n => n.classList.remove('slide'))
-        }))
     </script>
 </body>
 
